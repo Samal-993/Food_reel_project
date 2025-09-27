@@ -11,9 +11,13 @@ const app = express();
 
 
 app.use(cors({
-    origin:"https://food-reel-project-3oz9.vercel.app/",
-    credentials:true
-}))
+  origin: [
+    "http://localhost:5173",
+    "https://food-reel-project-3oz9.vercel.app"
+  ],
+  credentials: true
+}));
+
 
 app.use(express.json());
 app.use(cookieParser())
