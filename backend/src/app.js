@@ -11,7 +11,7 @@ const app = express();
 
 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://food-reel-project-3oz9.vercel.app/",
     credentials:true
 }))
 
