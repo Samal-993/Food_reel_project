@@ -1,0 +1,30 @@
+
+@import "tailwindcss";
+:root {
+  --radius: 10px;
+  --transition: 200ms ease;
+  --gap: 16px;
+  --max-width: 420px;
+}
+
+/* Light theme */
+.theme-light {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #0f1724;
+  --accent: #2563eb;
+  --accent-strong: #1e40af;
+  --shadow: 0 6px 18px rgba(16,24,40,0.08);
+}
+
+/* Dark theme */
+.theme-dark {
+  --bg: #071127;
+  --card: #071a2a;
+  --muted: #9aa7bf;
+  --text: #e6eef8;
+  --accent: #60a5fa;
+  --accent-strong: #3b82f6;
+  --shadow: 0 8px 30px rgba(2,6,23,0.6);
+}

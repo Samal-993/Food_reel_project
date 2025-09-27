@@ -1,0 +1,220 @@
+/* ================================
+   CreateFood Page Styles
+   ================================ */
+
+.create-food-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 20px;
+}
+
+.create-food-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 480px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: fadein 0.6s ease;
+  color: #fff;
+}
+
+.create-food-card h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 1px;
+}
+
+/* Upload Box */
+.video-upload-box {
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.video-upload-box:hover,
+.video-upload-box.drag-active {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  transform: scale(1.02);
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: #94a3b8;
+}
+
+.upload-icon {
+  width: 48px;
+  height: 48px;
+  color: #38bdf8;
+  animation: pulse 1.5s infinite;
+}
+
+.upload-placeholder p {
+  font-size: 0.95rem;
+}
+
+/* Video Preview */
+.video-preview-wrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.video-preview {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+
+/* Input Groups */
+.input-group {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #f8fafc;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.75rem;
+  color: #38bdf8;
+  background: #0f172a;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+/* Submit Button */
+.btn-3d {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+}
+
+.btn-3d:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+.btn-1d {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4d0d06, #e41818);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(56, 152, 248, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-1d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(248, 56, 72, 0.5);
+}
+
+.btn-1d:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 12px rgba(147, 27, 61, 0.2);
+}
+
+/* Animations */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
