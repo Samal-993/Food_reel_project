@@ -9,7 +9,7 @@ import PartnerLogin from "../pages/PartnerLogin";
 import Profile from "../food-partner/profile";
 import Home from "../general/Home";
 import CreateFood from "../food-partner/CreateFoodPartner";
-import Dashbord from "../general/dashbord";
+import Dashbord from "../general/Dashboard";
 
 import ProtectedRoute from "../pages/protectedRoute";
 
