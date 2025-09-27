@@ -22,7 +22,7 @@ const PartnerRegister = () => {
     //axios post request
     try {
       await axios.post(
-        "http://localhost:3000/api/auth/food-partner/register",
+        "https://food-reel-project-2.onrender.com/api/auth/food-partner/register",
         {
           name: businessName,
           contactName,

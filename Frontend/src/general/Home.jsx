@@ -13,8 +13,8 @@ const handleLogout = async () => {
   const userType = localStorage.getItem("userType");
   const logoutUrl =
     userType === "user"
-      ? "http://localhost:3000/api/auth/user/logout"
-      : "http://localhost:3000/api/auth/food-partner/logout";
+      ? "https://food-reel-project-2.onrender.com/api/auth/user/logout"
+      : "https://food-reel-project-2.onrender.com/api/auth/food-partner/logout";
 
   try {
     await axios.get(logoutUrl, { withCredentials: true });
@@ -29,7 +29,7 @@ const handleLogout = async () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/food", { withCredentials: true })
+      .get("https://food-reel-project-2.onrender.com/api/food", { withCredentials: true })
       .then((response) => {
         setVideos(response.data.foodItems);
         // console.log(response.data);
@@ -39,7 +39,7 @@ const handleLogout = async () => {
 
   async function likeVideo(item) {
     const response = await axios.post(
-      "http://localhost:3000/api/food/like",
+      "https://food-reel-project-2.onrender.com/api/food/like",
       { foodId: item._id },
       { withCredentials: true }
     );
@@ -96,7 +96,7 @@ const handleLogout = async () => {
   async function saveVideo(item) {
   try {
     const response = await axios.post(
-      "http://localhost:3000/api/food/save",
+      "https://food-reel-project-2.onrender.com/api/food/save",
       { foodId: item._id },
       { withCredentials: true }
     );

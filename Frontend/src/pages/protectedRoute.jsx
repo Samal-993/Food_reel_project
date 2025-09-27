@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children }) => {
   useEffect(() => {
     const checkLogin = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/auth/check-login", {
+        const res = await axios.get("https://food-reel-project-2.onrender.com/api/auth/check-login", {
           withCredentials: true,
         });
         setIsLoggedIn(res.data.loggedIn);

@@ -19,7 +19,7 @@ const UserRegister = () => {
         // console.log(password);
 
         try {
-          const response =  await axios.post("http://localhost:3000/api/auth/user/register",{
+          const response =  await axios.post("https://food-reel-project-2.onrender.com/api/auth/user/register",{
                fullName:name,
                email,
                password

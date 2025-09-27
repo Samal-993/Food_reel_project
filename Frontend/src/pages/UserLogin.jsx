@@ -24,7 +24,7 @@ const UserLogin = () => {
 
         try {
           
-          const response = await axios.post("http://localhost:3000/api/auth/user/login",{
+          const response = await axios.post("https://food-reel-project-2.onrender.com/api/auth/user/login",{
               email,
               password
   

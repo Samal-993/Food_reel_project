@@ -8,7 +8,7 @@ const Profile = () => {
   const [videos, setVideos] = useState([]);
 
  useEffect(() => {
-  axios.get(`http://localhost:3000/api/food-partner/${id}`, { withCredentials: true })
+  axios.get(`https://food-reel-project-2.onrender.com/api/food-partner/${id}`, { withCredentials: true })
     .then(response => {
       const partner = response.data.foodPartner;
       setProfile(partner);
